@@ -1,18 +1,16 @@
 def hello():
-    hello="hello"
-    s=input()
-    last_index=0
-    for i in range(len(hello)):
-        if hello[i] in s:
-            s_index=s.index(hello[i])
-            if s_index>last_index:
-                print("NO")
-                return
-            last_index=s.index(hello[i])
+    target = "hello"
+    s = input()
+    j = 0  
     
-    print("YES")
+    for char in s:
+        if char == target[j]:
+            j += 1
+        if j == len(target):  
+            print("YES")
+            return
     
+    print("NO")
+
 if __name__ == "__main__":
     hello()
-            
-        
